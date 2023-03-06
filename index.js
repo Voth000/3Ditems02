@@ -107,7 +107,7 @@ const spotLight = new THREE.SpotLight( 0xFF0093, 10);
 				scene.add( spotLight );
 
 				const lightHelper = new THREE.SpotLightHelper( spotLight );
-				scene.add( lightHelper );
+			
 
 
 
@@ -115,7 +115,7 @@ const spotLight = new THREE.SpotLight( 0xFF0093, 10);
 const planeGeometry = new THREE.PlaneGeometry( 1000, 1000 );
 const planeMaterial = new THREE.MeshStandardMaterial( { color: 0x808080 } )
 const plane = new THREE.Mesh( planeGeometry, planeMaterial );
-plane.receiveShadow = true;
+plane.receiveShadow = false;
 plane.position.y = -13;
 plane.rotateX( - Math.PI / 2);
 scene.add( plane );
@@ -132,7 +132,7 @@ const sizes = {
 
 //camera
 const camera = new THREE.PerspectiveCamera(45, sizes.width/sizes.height, 0.1, 1000)
-camera.position.set(0,40,80)
+camera.position.set(0,60,80)
 camera.lookAt(scene.position)
 scene.add(camera)
 
