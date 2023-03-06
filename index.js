@@ -47,7 +47,7 @@ const root1 = glb.scene;
 root1.scale.set(8, 8, 8);
 root1.position.y= -12;
 root1.position.z= 0;
-root1.position.x= -20;
+root1.position.x= -2;
 root1.name = "root1";
 root1.alpha = true,
 root1.visible = true;
@@ -71,7 +71,7 @@ root1.traverse(function(node1) {
 
 //light
 
-const light = new THREE.AmbientLight(0xffffff, 0.2)
+const light = new THREE.AmbientLight(0xffffff, 0.1)
 light.position.set(2,10,5)
 
 scene.add(light)
@@ -81,7 +81,7 @@ al.position.set(20,-10,-5)
 
 scene.add( al )
 
-const wl = new THREE.DirectionalLight(0x42FF32 , 0.8)
+const wl = new THREE.DirectionalLight(0x42FF32 , 0.2)
 wl.position.set(8,3,8)
 wl.castShadow = true
 scene.add( wl )
