@@ -87,7 +87,7 @@ wl.castShadow = true
 scene.add( wl )
 
 
-const ambient = new THREE.HemisphereLight( 0xffffff, 0x444444, 0.3 );
+const ambient = new THREE.HemisphereLight( 0xffffff, 0x444444, 0.4 );
 				scene.add( ambient );
 
 
@@ -113,7 +113,7 @@ const spotLight = new THREE.SpotLight( 0xFF0093, 10);
 
 //Create a plane that receives shadows (but does not cast them)
 const planeGeometry = new THREE.PlaneGeometry( 1000, 1000 );
-const planeMaterial = new THREE.MeshStandardMaterial( { color: 0x808080 } )
+const planeMaterial = new THREE.MeshStandardMaterial( { color: 0xDDDDDD } )
 const plane = new THREE.Mesh( planeGeometry, planeMaterial );
 plane.receiveShadow = false;
 plane.position.y = -13;
